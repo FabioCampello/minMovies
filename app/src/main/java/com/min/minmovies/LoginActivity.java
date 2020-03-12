@@ -94,8 +94,8 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
-//                                Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
-//                                startActivity(intent);
+                                Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
+                                startActivity(intent);
                         } else {
                             alert("Dados de acesso inválidos!");
                         }

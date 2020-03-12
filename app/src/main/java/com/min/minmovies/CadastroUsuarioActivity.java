@@ -81,8 +81,8 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
             return;
         }
         criarUser(email, senha);
-//        Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
+        startActivity(intent);
         finish();
     }
 
