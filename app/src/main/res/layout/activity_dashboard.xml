@@ -1,47 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/edtEmail"
-        android:layout_width="0dp"
+    <androidx.appcompat.widget.Toolbar
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textStyle="normal"
-        android:text="Email"/>
+        android:tooltipText="@string/app_name">
 
-    <TextView
-        android:id="@+id/edtId"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textStyle="normal"
-        android:text="Email"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:text="@string/app_name"/>
+
+    </androidx.appcompat.widget.Toolbar>
 
     <Button
         android:id="@+id/btnLogout"
@@ -55,4 +37,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="Sair"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
