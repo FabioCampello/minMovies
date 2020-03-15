@@ -26,7 +26,7 @@ public class ListaFilmesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_filmes);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+//        Toolbar toolbar = findViewById(R.id.toolbar);
 
         RecyclerView.LayoutManager  linearLayoutManager = new LinearLayoutManager(this);
         RecyclerView recycler = findViewById(R.id.recycler);

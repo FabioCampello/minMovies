@@ -27,7 +27,7 @@ public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.
 
     @Override
     public int getItemCount() {
-        return 5;
+        return 20;
     }
 
     static class ListaFilmesViewHolder extends RecyclerView.ViewHolder {
