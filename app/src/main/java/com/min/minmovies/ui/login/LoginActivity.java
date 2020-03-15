@@ -1,9 +1,8 @@
-package com.min.minmovies;
+package com.min.minmovies.ui.login;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +14,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.min.minmovies.ui.cadastro.CadastroUsuarioActivity;
+import com.min.minmovies.utils.Conexao;
+import com.min.minmovies.ui.filmes.ListaFilmesActivity;
+import com.min.minmovies.ui.senha.EsqueciSenhaActivity;
+import com.min.minmovies.R;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -94,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
-                                Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
+                                Intent intent = new Intent(getApplicationContext(), ListaFilmesActivity.class);
                                 startActivity(intent);
                         } else {
                             alert("Dados de acesso inválidos!");

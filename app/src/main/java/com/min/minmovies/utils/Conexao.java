@@ -1,4 +1,4 @@
-package com.min.minmovies;
+package com.min.minmovies.utils;
 
 import androidx.annotation.NonNull;
 

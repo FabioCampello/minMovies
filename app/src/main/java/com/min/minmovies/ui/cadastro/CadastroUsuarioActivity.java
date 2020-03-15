@@ -1,4 +1,4 @@
-package com.min.minmovies;
+package com.min.minmovies.ui.cadastro;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +14,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.min.minmovies.ui.filmes.ListaFilmesActivity;
+import com.min.minmovies.R;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -81,7 +84,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
             return;
         }
         criarUser(email, senha);
-        Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
+        Intent intent = new Intent(getApplicationContext(), ListaFilmesActivity.class);
         startActivity(intent);
         finish();
     }
