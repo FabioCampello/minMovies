@@ -10,14 +10,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.min.minmovies.R;
 import com.min.minmovies.data.model.Filme;
+import com.min.minmovies.data.network.response.FilmesResponse;
 
 import java.util.List;
 
 public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.ListaFilmesViewHolder> {
 
-    private List<Filme> filmes;
+    private List<FilmesResponse> filmes;
 
-    public ListaFilmesAdapter(List<Filme> filmes) {
+    public ListaFilmesAdapter(List<FilmesResponse> filmes) {
         this.filmes = filmes;
     }
 
@@ -31,7 +32,7 @@ public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ListaFilmesViewHolder holder, int position) {
-        holder.textTituloFilme.setText(filmes.get(position).getNome());
+        holder.textTituloFilme.setText(filmes.get(position).getOriginal_title());
     }
 
     @Override

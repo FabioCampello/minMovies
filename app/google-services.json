@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "firebase_url": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "project_id": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "storage_bucket": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    "project_number": "1034515688955",
+    "firebase_url": "https://minmovies-37481.firebaseio.com",
+    "project_id": "minmovies-37481",
+    "storage_bucket": "minmovies-37481.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "mobilesdk_app_id": "1:1034515688955:android:d55a8cb13ffb47bf386f5e",
         "android_client_info": {
           "package_name": "com.min.minmovies"
         }
       },
       "oauth_client": [
         {
-          "client_id": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+          "client_id": "1034515688955-rb5s9uqgcktp33c249pafhva6igr0scn.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.min.minmovies",
-            "certificate_hash": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+            "certificate_hash": "a77c140c53ddf698ec0fc0d5f94208aef77d2208"
           }
         },
         {
-          "client_id": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+          "client_id": "1034515688955-escrm0kh9dbl1i4tufr0mqs1p8f1bs97.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+          "current_key": "AIzaSyBPXhgkNebluxMjKJ_cMtM9xvixGjL59mI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+              "client_id": "1034515688955-escrm0kh9dbl1i4tufr0mqs1p8f1bs97.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

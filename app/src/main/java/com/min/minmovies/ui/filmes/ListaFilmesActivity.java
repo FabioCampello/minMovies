@@ -15,27 +15,48 @@ import com.google.firebase.auth.FirebaseUser;
 import com.min.minmovies.R;
 import com.min.minmovies.adapters.ListaFilmesAdapter;
 import com.min.minmovies.data.model.Filme;
+import com.min.minmovies.data.network.ApiService;
+import com.min.minmovies.data.network.response.FilmesResult;
 import com.min.minmovies.utils.Conexao;
 
 import java.util.Arrays;
 import java.util.List;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ListaFilmesActivity extends AppCompatActivity {
 
     private FirebaseAuth auth;
     private FirebaseUser user;
 
+    RecyclerView recycler;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_filmes);
 
-//        Toolbar toolbar = findViewById(R.id.toolbar);
+        recycler = (RecyclerView) findViewById(R.id.recycler);
 
-        RecyclerView.LayoutManager  linearLayoutManager = new LinearLayoutManager(this);
-        RecyclerView recycler = findViewById(R.id.recycler);
-        recycler.setLayoutManager(linearLayoutManager);
-        recycler.setAdapter(new ListaFilmesAdapter(criaFilmes()));
+        ApiService.getInstance().recuperaListaFilmesPopulares("22090c194e438ff8039642617a7308dc")
+                .enqueue(new Callback<FilmesResult>() {
+                    @Override
+                    public void onResponse(Call<FilmesResult> call, Response<FilmesResult> response) {
+                        if(response.isSuccessful()) {
+                             RecyclerView.LayoutManager  linearLayoutManager = new LinearLayoutManager(ListaFilmesActivity.this);
+                             recycler.setLayoutManager(linearLayoutManager);
+                             recycler.setAdapter(new ListaFilmesAdapter(response.body().getResults()));
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<FilmesResult> call, Throwable t) {
+
+                    }
+                });
 
         inicializaComponentes();
         eventosDeClick();
