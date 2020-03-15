@@ -47,8 +47,6 @@ public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.
         public ListaFilmesViewHolder(View itemView) {
             super(itemView);
             textTituloFilme = itemView.findViewById(R.id.textTituloFilme);
-
-            textTituloFilme.setText("Filme de exemplo");
         }
     }
 
