@@ -9,8 +9,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.min.minmovies.R;
+import com.min.minmovies.data.model.Filme;
+
+import java.util.List;
 
 public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.ListaFilmesViewHolder> {
+
+    private List<Filme> filmes;
+
+    public ListaFilmesAdapter(List<Filme> filmes) {
+        this.filmes = filmes;
+    }
 
     // FIRST
     @NonNull
@@ -22,12 +31,12 @@ public class ListaFilmesAdapter extends RecyclerView.Adapter<ListaFilmesAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ListaFilmesViewHolder holder, int position) {
-        holder.textTituloFilme.setText("Filme exemplo 2");
+        holder.textTituloFilme.setText(filmes.get(position).getNome());
     }
 
     @Override
     public int getItemCount() {
-        return 20;
+        return (filmes != null && filmes.size() > 0) ? filmes.size() : 0;
     }
 
     static class ListaFilmesViewHolder extends RecyclerView.ViewHolder {

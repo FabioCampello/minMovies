@@ -14,7 +14,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.min.minmovies.R;
 import com.min.minmovies.adapters.ListaFilmesAdapter;
+import com.min.minmovies.data.model.Filme;
 import com.min.minmovies.utils.Conexao;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class ListaFilmesActivity extends AppCompatActivity {
 
@@ -31,7 +35,7 @@ public class ListaFilmesActivity extends AppCompatActivity {
         RecyclerView.LayoutManager  linearLayoutManager = new LinearLayoutManager(this);
         RecyclerView recycler = findViewById(R.id.recycler);
         recycler.setLayoutManager(linearLayoutManager);
-        recycler.setAdapter(new ListaFilmesAdapter());
+        recycler.setAdapter(new ListaFilmesAdapter(criaFilmes()));
 
         inicializaComponentes();
         eventosDeClick();
@@ -67,6 +71,16 @@ public class ListaFilmesActivity extends AppCompatActivity {
 //            }
 //        });
 
+    }
+
+    private List<Filme> criaFilmes() {
+        return Arrays.asList(
+            new Filme("Coração valente"),
+            new Filme("Os guardiões da galáxia"),
+            new Filme("Heman"),
+            new Filme("Senhor dos anéis"),
+            new Filme("Coração de ferro")
+        );
     }
 
 }
